@@ -1,10 +1,11 @@
 /*! blanket - v1.1.5 */
 
 if (typeof QUnit !== 'undefined'){ QUnit.config.autostart = false; }
+
+if (document.documentElement.className.indexOf('skip-blanket') === -1) {
+
 (function(define){
-    if (document.documentElement.className.indexOf('skip-blanket') != -1) {
-        return;
-    }
+
 /*
   Copyright (C) 2013 Ariya Hidayat <ariya.hidayat@gmail.com>
   Copyright (C) 2013 Thaddee Tyl <thaddee.tyl@gmail.com>
@@ -5300,3 +5301,4 @@ if (typeof QUnit !== 'undefined'){
     }
 }
 })();
+} // end skip-blanket if statement
